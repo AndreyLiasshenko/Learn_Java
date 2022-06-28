@@ -59,6 +59,7 @@ public class PhoneBook {
             Set<?> setNum = prop.keySet();
 
             ArrayList<String> arrL = new ArrayList<>(); // масив для ключей
+
             // передаем все ключи в масив
             for (Object x : setNum) {
                 arrL.add(x.toString());
@@ -72,13 +73,14 @@ public class PhoneBook {
 
             for (String x : arrL) {
                 System.out.print(x);
+                // разделяем ключи и значения на равное расстояние при выводе
+                // в консоль
                 for (int j = 0; j < (max - x.length() + 1); j++) {
                     System.out.print(" ");
                 }
                 number = (String) prop.get(x);
                 System.out.println(number);
             }
-
 
         } while (!state.equals("leave"));
     }
