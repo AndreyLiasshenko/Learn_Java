@@ -6,7 +6,23 @@ public class ComparatorDemo implements Comparator<String> {
         String strA, strB;
         strA = a;
         strB = b;
-        return strB.compareTo(strA);
+        return strA.compareTo(strB);
+    }
+}
+
+class CDemo {
+    public static void main(String[] args) {
+        TreeSet<String> ob = new TreeSet<>(new ComparatorDemo());
+        ob.add("A");
+        ob.add("C");
+        ob.add("D");
+        ob.add("F");
+        ob.add("W");
+
+        for (String x : ob) {
+            System.out.println(x);
+        }
+
     }
 }
 
